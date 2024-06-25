@@ -1,15 +1,16 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<div class="p-12">
+    <header class="flex justify-between">
+        <div>
+            <h1 class ="text-4xl mb-3  ">
+                صباح الخير 👋🏻
+            </h1>
+            <h2 class="text-sm text-surface-500/50 ">
+                اليوم, الإثنين الموافق 25 يونيو
+            </h2>
+    
+        </div>
+        <div class="bg-red-500 h-16 w-16 ">
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
-	</div>
+        </div>
+    </header>
 </div>
