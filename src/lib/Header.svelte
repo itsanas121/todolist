@@ -24,16 +24,16 @@
 
 <header class="flex justify-between">
   <div>
-    <h1 class="text-4xl mb-2">
-      {period} الخير👋..
+    <h1 class="text-3xl lg:text-4xl mb-2">
+      {period} الخير أنس👋
     </h1>
-    <h2 class="text-2xl text-surface-900">
+    <h2 class="text-l text-surface-900">
       {dayjs().format("اليوم هو, dddd D MMM YYYY")}
     </h2>
   </div>
 
   <button
-    class="btn variant-filled-secondary w-48 h-hit py-4 justify-between"
+    class="btn variant-filled-secondary w-36 px-2 h-hit py-4 justify-between"
     use:popup={popupCombobox}
   >
     <span>{comboboxValue}</span>
