@@ -7,12 +7,12 @@
   } from "@skeletonlabs/skeleton";
   import dayjs from "dayjs";
   import "dayjs/locale/ar";
+  import {filter} from "$lib/stores/filter";
 
   dayjs.locale("ar");
 
   let period = dayjs().format("a") == "م" ? "مساء" : "صباح";
 
-  let comboboxValue: string = "جميع المهام";
 
   const popupCombobox: PopupSettings = {
     event: "click",
@@ -25,7 +25,7 @@
 <header class="flex justify-between">
   <div>
     <h1 class="text-3xl lg:text-4xl mb-2">
-      {period} الخير أنس👋
+      {period} الخير 👋 ...
     </h1>
     <h2 class="text-l text-surface-900">
       {dayjs().format("اليوم هو, dddd D MMM YYYY")}
@@ -36,7 +36,7 @@
     class="btn variant-filled-secondary w-36 px-2 h-hit py-4 justify-between"
     use:popup={popupCombobox}
   >
-    <span>{comboboxValue}</span>
+    <span>{$filter}</span>
     <span class="!m-0"
       ><svg
         class="w-6 rotate-90"
@@ -52,10 +52,10 @@
 
   <div class="card w-48 shadow-xl py-2" data-popup="popupCombobox">
     <ListBox rounded="rounded-none" active="variant-outline-primary">
-      <ListBoxItem bind:group={comboboxValue} name="medium" value="جميع المهام"
+      <ListBoxItem bind:group={$filter} name="medium" value="جميع المهام"
         >جميع المهام</ListBoxItem
       >
-      <ListBoxItem bind:group={comboboxValue} name="medium" value="مهام اليوم"
+      <ListBoxItem bind:group={$filter} name="medium" value="مهام اليوم"
         >مهام اليوم</ListBoxItem
       >
     </ListBox>
