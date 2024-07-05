@@ -7,25 +7,31 @@
   } from "@skeletonlabs/skeleton";
   import dayjs from "dayjs";
   import "dayjs/locale/ar";
-  import {filter} from "$lib/stores/filter";
+  import { filter } from "$lib/stores/filter";
 
   dayjs.locale("ar");
 
   let period = dayjs().format("a") == "م" ? "مساء" : "صباح";
-
 
   const popupCombobox: PopupSettings = {
     event: "click",
     target: "popupCombobox",
     placement: "bottom",
     closeQuery: ".listbox-item",
+    state: (e: Record<string, boolean>) => {
+      if (e.state) {
+        document.getElementById("arrow")?.classList.add("rotate-90");
+      } else {
+        document.getElementById("arrow")?.classList.remove("rotate-90");
+      }
+    },
   };
 </script>
 
 <header class="flex justify-between">
   <div>
     <h1 class="text-3xl lg:text-4xl mb-2">
-      {period} الخير 👋 ...
+      {period} الخير 👋 ..
     </h1>
     <h2 class="text-l text-surface-900">
       {dayjs().format("اليوم هو, dddd D MMM YYYY")}
@@ -39,7 +45,8 @@
     <span>{$filter}</span>
     <span class="!m-0"
       ><svg
-        class="w-6 rotate-90"
+        id="arrow"
+        class="w-6 rotate-180 transition-all"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 12 12"
         ><path
@@ -62,4 +69,3 @@
     <div class="arrow bg-surface-100-800-token" />
   </div>
 </header>
-

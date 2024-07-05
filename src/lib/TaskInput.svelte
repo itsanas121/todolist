@@ -21,7 +21,7 @@
   }
 </script>
 
-<div
+<form
   class="input-group input-group-divider flex flex-col sm:flex-row justify-between bg-white"
 >
   <input
@@ -36,7 +36,12 @@
     title="Input (datetime-local)"
     type="datetime-local"
   />
-  <button on:click={addTask} class="variant-filled-primary p-1">
+  <button
+    type="submit"
+    on:click={addTask}
+    class="variant-filled-primary p-1 {title.trim().length == 0 && 'bg-slate-400'}"
+    disabled={title.trim().length == 0}
+  >
     <span class="mx-auto">إضافة</span>
   </button>
-</div>
+</form>
