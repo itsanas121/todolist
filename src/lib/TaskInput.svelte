@@ -37,11 +37,11 @@
     placeholder="عنوان المهمة"
     style="word-wrap: break-word;"
   />
-  <div class="container flex flex-col !items-end !text-center max-w-72">
+  <div class="container flex flex-col !sm:justify-end !items-end !text-center max-w-72">
     <div class="!justify-items-center ml-10 text-[#0047AB]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
-      class="input sm:w-fit"
+      class="input sm:w-fit sm:justify-center"
       title="Input (datetime-local)"
       type="datetime-local"
     />
