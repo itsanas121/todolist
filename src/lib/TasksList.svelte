@@ -9,9 +9,9 @@
 </script>
 
 {#if $tasks.length == 0}
-<div class="flex flex-col items-center justify-center h-[50dvh] gap-4">
+<div class="flex flex-col items-center justify-center h-[50dvh] gap-4 text-xl">
   <img src="/timeismoney.svg" class="w-48 h-48 grayscale" alt="الوقت "/>
-  ليس لديك أي مهام 👏🏻</div>
+  لايوجد لديك أي مهام 👏🏻</div>
 {:else}
 {#if $tasks.filter((task) => !task.isDone).length > 0}
   <ol transition:fade class="flex flex-col gap-2">

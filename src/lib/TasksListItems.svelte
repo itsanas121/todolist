@@ -33,12 +33,12 @@
     modalStore.trigger(modal);
   }
   function applyFilter(filter: typeof $filter, task: Task): boolean {
-    switch(filter){
+    switch (filter) {
       case "مهام اليوم":
-      return dayjs(task.assignedDate).unix() - dayjs().unix() <= 24 * 60 * 60
+        return dayjs(task.assignedDate).unix() - dayjs().unix() <= 24 * 60 * 60;
       case "جميع المهام":
-        default:
-          return true;
+      default:
+        return true;
     }
   }
 </script>
@@ -55,7 +55,7 @@
           class="checkbox rounded-lg h-6 w-6"
           type="checkbox"
         />
-        <span class="mr-2"> {task.title}</span>
+        <span class="mr-2 break-all"> {task.title}</span>
       </div>
       <div class="flex gap-1">
         <button class="btn variant-filled-surface hover:bg-surface-700">
