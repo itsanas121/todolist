@@ -22,7 +22,7 @@
 </script>
 
 <form
-  class="input-group input-group-divider flex flex-col sm:flex-row bg-white"
+  class="input-group input-group-divider flex flex-col sm:flex-row justify-between gap-4 bg-white"
 >
 <!-- <textarea
     bind:value={title}
@@ -38,16 +38,18 @@
     style="word-wrap: break-word;"
   />
   <div class="container flex flex-col !sm:justify-end !items-end !text-center max-w-96">
-    <div class="!justify-items-center ml-10 text-[#0047AB] "> تاريخ المهمة</div>
+    <div class="!justify-items-center ml-10 text-[#0047AB]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
-      class="input sm:w-fit !max-w-96"
+      class="input sm:w-fit "
       title="Input (datetime-local)"
       type="datetime-local"
     />
   </div>
+
+  
 </form>
-  <button
+<button
     type="submit"
     on:click={addTask}
     class="variant-filled-primary p-1 {title.trim().length == 0 &&
@@ -56,4 +58,3 @@
   >
     <span class="mx-auto">إضافة</span>
   </button>
-
