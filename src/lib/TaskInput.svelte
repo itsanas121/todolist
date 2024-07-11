@@ -22,9 +22,9 @@
 </script>
 
 <form
-  class="input-group input-group-divider flex flex-col sm:flex-row justify-between gap-4 bg-white"
+  class="input-group input-group-divider flex flex-col sm:flex-row justify-between bg-white"
 >
-<!-- <textarea
+  <!-- <textarea
     bind:value={title}
     class="flex-1 text-xl text-center"
     placeholder="عنوان المهمة"
@@ -37,24 +37,25 @@
     placeholder="عنوان المهمة"
     style="word-wrap: break-word;"
   />
-  <div class="container flex flex-col !sm:justify-end !items-end !text-center max-w-96">
-    <div class="!justify-items-center ml-10 text-[#0047AB]">تاريخ المهمة</div>
+</form>
+<form class=" input-group flex justify-center max-w-min ">
+  <div class="flex flex-row ">
+    <div class="!justify-items-center text-[#0047AB]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
-      class="input sm:w-fit "
+      class="input sm:w-fit  "
       title="Input (datetime-local)"
       type="datetime-local"
     />
   </div>
-
-  
+  <button
+  type="submit"
+  on:click={addTask}
+  class="variant-filled-primary p-1 {title.trim().length == 0 &&
+    'bg-slate-400'}"
+  disabled={title.trim().length == 0}
+>
+  <span class="mx-">إضافة</span>
+</button>
 </form>
-<button
-    type="submit"
-    on:click={addTask}
-    class="variant-filled-primary p-1 {title.trim().length == 0 &&
-      'bg-slate-400'}"
-    disabled={title.trim().length == 0}
-  >
-    <span class="mx-auto">إضافة</span>
-  </button>
+
