@@ -24,12 +24,7 @@
 <form
   class="input-group input-group-divider flex flex-col sm:flex-row justify-between bg-white"
 >
-<!-- <textarea
-    bind:value={title}
-    class="flex-1 text-xl text-center"
-    placeholder="عنوان المهمة"
-    style="border: none; border-bottom-left-radius: 0;"
-></textarea> -->
+
   <input
     bind:value={title}
     class="flex-1 text-xl"
