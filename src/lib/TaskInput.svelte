@@ -38,7 +38,7 @@
     style="word-wrap: break-word;"
   />
 </form>
-<form class=" input-group flex justify-center max-w-min ">
+<form class=" input-group flex justify-center  ">
   <div class="flex flex-row ">
     <div class="!justify-items-center text-[#0047AB]">تاريخ المهمة</div>
     <input
