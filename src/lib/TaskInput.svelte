@@ -34,16 +34,16 @@
     bind:value={title}
     class="flex-1 text-xl"
     type="search"
-    placeholder="عنوان المهمة"
+    placeholder="ماذا تريد أن تنجز؟"
     style="word-wrap: break-word;"
   />
 </form>
 <form class=" input-group flex justify-center  ">
-  <div class="flex flex-row ">
-    <div class="!justify-items-center text-[#0047AB]">تاريخ المهمة</div>
+  <div class="flex flex-row !bg-[#F0F0F0]">
+    <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
-      class="input sm:w-fit  "
+      class="input sm:w-fit !flex-1  "
       title="Input (datetime-local)"
       type="datetime-local"
     />
@@ -51,11 +51,11 @@
   <button
   type="submit"
   on:click={addTask}
-  class="variant-filled-primary p-1 {title.trim().length == 0 &&
+  class="variant-filled-primary p-1 flex-1  {title.trim().length == 0 &&
     'bg-slate-400'}"
   disabled={title.trim().length == 0}
 >
-  <span class="mx-">إضافة</span>
+  <span class="mx-auto text-center sm:text-right ">إضافة</span>
 </button>
 </form>
 
