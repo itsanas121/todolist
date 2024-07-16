@@ -43,9 +43,10 @@
     <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
-      class="input sm:w-fit !flex-1  "
+      class="input  sm:w-fit !flex-1  "
       title="Input (datetime-local)"
       type="datetime-local"
+      dir="auto"
     />
   </div>
   <button
