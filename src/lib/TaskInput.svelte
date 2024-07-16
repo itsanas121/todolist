@@ -40,7 +40,7 @@
 </form>
 <form class=" input-group flex justify-center  ">
   <div class="flex flex-row !bg-[#F0F0F0]">
-    <!-- <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div> -->
+    <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div>
     <input
       bind:value={datetime}
       class="input sm:w-fit !flex-1  "
