@@ -40,10 +40,10 @@
 </form>
 <form class=" input-group flex justify-center  ">
   <div class="flex flex-row !bg-[#F0F0F0]">
-    <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div>
+    <!-- <div class="!justify-items-center text-[#e0541d]">تاريخ المهمة</div> -->
     <input
       bind:value={datetime}
-      class="input sm:w-fit !max-w-80  "
+      class="input sm:w-fit !flex-1  "
       title="Input (datetime-local)"
       type="datetime-local"
     />
@@ -51,7 +51,7 @@
   <button
   type="submit"
   on:click={addTask}
-  class="variant-filled-primary p-1 flex-1 !sm:max-w-80 {title.trim().length == 0 &&
+  class="variant-filled-primary p-1 flex-1  {title.trim().length == 0 &&
     'bg-slate-400'}"
   disabled={title.trim().length == 0}
 >
