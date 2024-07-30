@@ -25,5 +25,6 @@
 <svelte:head>
   {@html webManifestLink}
 </svelte:head>
+
 <Modal buttonPositive="variant-filled-error" />
 <slot />
